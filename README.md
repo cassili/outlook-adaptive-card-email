@@ -1,0 +1,1 @@
+# outlook-adaptive-card-email
