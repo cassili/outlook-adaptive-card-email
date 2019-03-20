@@ -3,8 +3,10 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <script type="application/adaptivecard+json">
 {
-    "type": "AdaptiveCard",
-    "body": [
+	"$schema": "https://adaptivecards.io/schemas/adaptive-card.json",
+	"type": "AdaptiveCard",
+	"version": "1.0",
+	"body": [
         {
             "type": "Container",
             "items": [
@@ -12,119 +14,101 @@
                     "type": "TextBlock",
                     "size": "Medium",
                     "weight": "Bolder",
-                    "text": "This is a new meeting invitation."
+                    "text": "Dear users:"
                 },
                 {
-                    "type": "ColumnSet",
-                    "columns": [
-                        {
-                            "type": "Column",
-                            "items": [
-                                {
-                                    "type": "Image",
-                                    "style": "Person",
-                                    "url": "https://pbs.twimg.com/profile_images/3647943215/d7f12830b3c17a5a9e4afcc370e3a37e_400x400.jpeg",
-                                    "size": "Small"
-                                }
-                            ],
-                            "width": "auto"
-                        },
-                        {
-                            "type": "Column",
-                            "items": [
-                                {
-                                    "type": "TextBlock",
-                                    "weight": "Bolder",
-                                    "text": "Matt Hidinger",
-                                    "wrap": true
-                                },
-                                {
-                                    "type": "TextBlock",
-                                    "spacing": "None",
-                                    "text": "Created {{DATE(2017-02-14T06:08:39Z,SHORT)}}",
-                                    "isSubtle": true,
-                                    "wrap": true
-                                }
-                            ],
-                            "width": "stretch"
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "type": "Container",
-            "items": [
-                {
                     "type": "TextBlock",
-                    "text": "Now that we have defined the main rules and features of the format, we need to produce a schema and publish it to GitHub. The schema will be the starting point of our reference documentation.",
+                    "text": "Please note that Bangkok Meeting Room has been reserved for the captioned meeting.",
                     "wrap": true
                 },
                 {
                     "type": "FactSet",
                     "facts": [
                         {
-                            "title": "Start:",
-                            "value": "2019.03.15 22:00"
+                            "title": "Start date:",
+                            "value": "08:30, 2019-03-22"
                         },
                         {
-                            "title": "End:",
-                            "value": "2019.03.16 22:00"
+                            "title": "Due date:",
+                            "value": "11:30, 2019-03-22"
                         },
                         {
-                            "title": "People:",
+                            "title": "Host by:",
                             "value": "hhh"
                         },
                         {
-                            "title": "Room:",
-                            "value": "8203"
+                            "title": "Location in:",
+                            "value": "C-211, South Wing"
                         }
                     ]
+                },
+                {
+                    "type": "TextBlock",
+                    "text": "If you need further help, please kindly contact our receptionists."
+                },
+                {
+                    "type": "TextBlock",
+                    "text": "Important Notice: Don't forget your Safety Share in your agenda."
                 }
             ]
         }
     ],
     "actions": [
         {
+            "type": "Action.Http",
+            "title": "Approve",
+            "method": "POST",
+            "url": "https://www.hanrongji.top",
+            "body": "<body of the POST request>",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ]
+        },
+        {
             "type": "Action.ShowCard",
-            "title": "Dent",
+            "title": "Deny",
             "card": {
                 "type": "AdaptiveCard",
                 "style": "emphasis",
                 "body": [
                     {
-                        "type": "Input.Date",
-                        "id": "dueDate"
-                    },
-                    {
                         "type": "Input.Text",
                         "id": "comment",
-                        "placeholder": "Add a comment",
+                        "placeholder": "The reason for missing this meeting...",
                         "isMultiline": true
                     }
                 ],
                 "actions": [
                     {
-                        "type": "Action.OpenUrl",
-                        "title": "OK",
-                        "url": "http://adaptivecards.io"
+                        "type": "Action.Http",
+                        "title": "Submit",
+                        "method": "POST",
+                        "url": "https://www.hanrongji.top",
+                        "body": "<body of the POST request>",
+                        "headers": [
+                            {
+                                "name": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ]
                     }
                 ],
                 "$schema": "http://adaptivecards.io/schemas/adaptive-card.json"
             }
-        },
-        {
-            "type": "Action.OpenUrl",
-            "title": "Approve",
-            "url": "http://adaptivecards.io"
         }
-    ],
-    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
-    "version": "1.0"
+            
+        
+    ]
 }
 </script>
 </head>
-If the card doesn&#39;t appear, <a target="_blank" href="https://store.office.com/app.aspx?assetid=WA104381686&productgroup=Outlook&mktvid=PN102957641&mktcmpid=sendmailsample"/>install Actionable Messages Debugger Outlook add-in</a> to debug the issue.
-<body>
+<br>
+<br>
+<br>
+<p>Kind Regardsp</p>
+<p>Huntsman Campus Shanghai Admin.</p>
 </body>
 </html>
